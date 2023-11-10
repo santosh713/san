@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Coiny&family=Montserrat:wght@400;500;600&family=Pacifico&family=Poppins:wght@400;500;600&display=swap");
+/* choose --> Coiny,Montserrat,Pacifico,Poppins */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+html {
+  font-family: Montserrat;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+:root {
+  --heading: hsl(228, 100%, 62%);
+  --para: hsl(0, 0%, 0%);
+  --para-tint: hsl(0, 1%, 33%);
+  --white: hsl(0, 0%, 100%);
+  --white-tint: hsla(0, 63%, 97%, 0.925);
+  --black: hsl(0, 0%, 0%);
+  --bg: hsl(240, 100%, 99%);
+  --gradient: linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
+}
+p {
+  font-family: poppins;
+}
+.logo {
+  font-size: 2rem;
+  color: var(--heading);
+  font-weight: bolder;
+  font-family: comebreak;
+
+  cursor: pointer;
+}
+.logo:hover {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--heading);
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 10vh;
+  background-color: var(--white-tint);
+}
+.navlist {
+  display: flex;
+  gap: 3rem;
+}
+.navlist > li > a {
+  color: var(--black);
+  font-weight: 500;
+  transition: 0.5s ease;
+}
+.navlist > li > a:hover {
+  color: var(--heading);
+}
+.section {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.container {
+  height: 90vh;
+}
+.grid {
+  display: grid;
+  gap: 9rem;
+}
+.two-colunm-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+.right {
+  display: flex;
+  align-items: center;
+}
+.portfolio {
+  /* background-color: red; */
+  height: 3rem;
+  cursor: default;
+}
+.left {
+  margin: auto;
+  padding-left: 2rem;
+  position: relative;
+}
+.hi {
+  font-size: 9rem;
+  font-family: Coiny;
+  cursor: pointer;
+  max-width: fit-content;
+}
+.hi:hover {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--heading);
+}
+
+.info {
+  letter-spacing: 0.06rem;
+}
+.info1 {
+  letter-spacing: 0.06rem;
+  padding-top: 1rem;
+}
+
+.profile-pic {
+  max-width: 80%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  margin: top 1rem;
+  padding: 0.8rem;
+  border-radius: 30px;
+  border: none;
+  color: var(--white);
+  background-color: var(--black);
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.button:hover {
+  background-color: var(--heading);
+  color: var(--white);
+}
+.portfolio {
+  font-size: 6rem;
+  rotate: 90deg;
+  font-weight: bolder;
+  font-family: coiny;
+  -webkit-text-stroke: 2px var(--heading);
+  color: transparent;
+  max-height: 90vh;
+}
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 1250px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+  }
+  .navlist {
+    transform: translate(-100%, -100%);
+    height: 10vh;
+    transition: 1s ease-in-out;
+  }
+  .active {
+    height: 100vh;
+    background-color: var(--white-tint);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0, 0);
+    font-size: larger;
+    font-weight: bolder;
+  }
+  .logo {
+    position: absolute;
+    top: 2rem;
+    left: 3rem;
+  }
+}
